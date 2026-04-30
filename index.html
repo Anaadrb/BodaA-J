@@ -21,25 +21,17 @@
             to { opacity: 1; transform: translateY(0); }
         }
         .animate-fade { animation: fadeIn 1.5s ease-out forwards; }
-        
-        .img-placeholder {
-            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #9ca3af;
-        }
     </style>
 </head>
-<body class="bg-crema text-azul selection:bg-[#D4AF37] selection:text-white text-center scroll-smooth">
+<body class="bg-crema text-azul selection:bg-[#D4AF37] selection:text-white text-center">
 
     <!-- CABECERA CON FONDO TRANSLÚCIDO -->
     <header class="relative h-screen flex flex-col items-center justify-center text-center px-4 overflow-hidden border-b border-dorado/10">
-        <div class="absolute inset-0 z-0 bg-slate-200">
+        <!-- Imagen de fondo con opacidad suave -->
+        <div class="absolute inset-0 z-0">
             <img src="dibujo.jpeg" 
-                 alt="[Imagen de atardecer mediterráneo]" 
-                 class="w-full h-full object-cover opacity-20"
-                 onerror="this.parentElement.classList.add('img-placeholder'); this.style.display='none'">
+                 alt="Atardecer mediterráneo" 
+                 class="w-full h-full object-cover opacity-20">
         </div>
 
         <div class="z-10 animate-fade text-center w-full">
@@ -74,8 +66,9 @@
     <!-- SECCIÓN DE IMAGEN LOCAL -->
     <section class="py-16 px-6 bg-white">
         <div class="max-w-4xl mx-auto">
-            <div class="rounded-2xl overflow-hidden shadow-2xl bg-slate-50 min-h-[300px] flex items-center justify-center">
-                <img src="nuestra-foto.jpg" alt="[Imagen de Ana y Javier]" class="w-full h-auto object-cover max-h-[600px]" onerror="this.style.display='none'; this.parentElement.innerHTML='<p class=\"text-slate-400 italic\">[Tu foto principal aquí]</p>'">
+            <div class="rounded-2xl overflow-hidden shadow-2xl">
+                <!-- Cambia 'nuestra-foto.jpg' por el nombre de tu archivo en GitHub -->
+                <img src="nuestra-foto.jpg" alt="Ana y Javier" class="w-full h-auto object-cover max-h-[600px]" onerror="this.style.display='none'">
             </div>
         </div>
     </section>
@@ -89,11 +82,11 @@
             </p>
         </div>
     </section>
-
-    <section class="py-12 px-6 bg-white">
+        <section class="py-12 px-6 bg-white">
         <div class="max-w-sm mx-auto">
-            <div class="rounded-2xl overflow-hidden shadow-xl bg-slate-50 aspect-[3/4] flex items-center justify-center">
-                <img src="foto-vertical.jpeg" alt="[Imagen vertical de los novios]" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<p class=\"text-slate-400 italic text-sm\">[Foto vertical 1]</p>'">
+            <div class="rounded-2xl overflow-hidden shadow-xl bg-slate-50 aspect-[3/4]">
+                <!-- Cambia 'foto-vertical.jpg' por el nombre de tu archivo vertical subido a GitHub -->
+                <img src="foto-vertical.jpeg" alt="[Imagen de los novios]" class="w-full h-full object-cover" onerror="this.style.display='none'">
             </div>
         </div>
     </section>
@@ -106,16 +99,14 @@
                 <i data-lucide="calendar" class="mb-4 text-dorado mx-auto md:mx-0"></i>
                 <h3 class="text-xl font-semibold mb-2 text-center">Cuándo</h3>
                 <p class="text-slate-500 text-sm italic text-center">Sábado, 12 de Septiembre, 2026</p>
-                <p class="text-slate-500 text-sm text-center">Recepción: 11:30 AM | Ceremonia: 12:00 PM</p>
+                <p class="text-slate-500 text-sm">Recepción: 11:30 AM | Ceremonia: 12:00 PM</p>
             </div>
             <div class="bg-white p-10 rounded-2xl shadow-sm border border-slate-100 transition hover:shadow-md text-center md:text-left">
                 <i data-lucide="map-pin" class="mb-4 text-dorado mx-auto md:mx-0"></i>
                 <h3 class="text-xl font-semibold mb-2 text-center">Dónde</h3>
                 <p class="text-slate-500 italic font-medium text-lg text-center">Iglesia de Santiago Apóstol</p>
-                <p class="text-slate-500 text-sm mb-4 text-center">Calle Granada, 78. Málaga.</p>
-                <div class="text-center">
-                    <a href="https://www.google.com/maps/search/?api=1&query=Iglesia+de+Santiago+Apóstol+Málaga" target="_blank" class="text-dorado hover:underline text-[10px] tracking-widest uppercase inline-block">Ver ubicación →</a>
-                </div>
+                <p class="text-slate-500 text-sm mb-4">Calle Granada, 78. Málaga.</p>
+                <a href="https://www.google.com/maps/search/?api=1&query=Iglesia+de+Santiago+Apóstol+Málaga" target="_blank" class="text-dorado hover:underline text-[10px] tracking-widest uppercase inline-block text-left">Ver ubicación →</a>
             </div>
         </div>
     </section>
@@ -154,7 +145,7 @@
         </div>
         <div class="bg-white p-10 md:p-16 rounded-3xl border border-slate-100 shadow-xl flex flex-col items-center justify-center space-y-6 mx-auto">
             <i data-lucide="check-circle" size="48" class="text-[#D4AF37]"></i>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVFyZFdR2yHYH5_bOWMR9e9Cjk9v1T6-pb1CyD_-MopQH9aw/viewform" target="_blank" class="bg-azul text-white px-12 py-4 rounded-full text-[10px] tracking-[0.3em] hover:bg-dorado transition transform hover:scale-105 shadow-lg uppercase font-semibold inline-block text-center">Rellenar Formulario</a>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSeVFyZFdR2yHYH5_bOWMR9e9Cjk9v1T6-pb1CyD_-MopQH9aw/viewform?usp=publish-editor" target="_blank" class="bg-azul text-white px-12 py-4 rounded-full text-[10px] tracking-[0.3em] hover:bg-dorado transition transform hover:scale-105 shadow-lg uppercase font-semibold inline-block text-center">Rellenar Formulario</a>
         </div>
     </section>
 
@@ -181,11 +172,11 @@
             </div>
         </div>
     </section>
-
     <section class="py-12 px-6 bg-white">
         <div class="max-w-sm mx-auto">
-            <div class="rounded-2xl overflow-hidden shadow-xl bg-slate-50 aspect-[3/4] flex items-center justify-center">
-                <img src="foto-vertical-final.jpeg" alt="[Imagen final de los novios]" class="w-full h-full object-cover" onerror="this.style.display='none'; this.parentElement.innerHTML='<p class=\"text-slate-400 italic text-sm\">[Foto vertical 2]</p>'">
+            <div class="rounded-2xl overflow-hidden shadow-xl bg-slate-50 aspect-[3/4]">
+                <!-- Cambia 'foto-vertical-final.jpg' por el nombre de tu segunda foto vertical subida a GitHub -->
+                <img src="foto-vertical-final.jpeg" alt="[Imagen de los novios]" class="w-full h-full object-cover" onerror="this.style.display='none'">
             </div>
         </div>
     </section>
@@ -201,28 +192,16 @@
 
     <script>
         lucide.createIcons();
-
         function updateCountdown() {
             const target = new Date('September 12, 2026 12:00:00').getTime();
             const now = new Date().getTime();
             const diff = target - now;
-
-            if (diff <= 0) {
-                document.getElementById('countdown').innerHTML = "<p class='text-dorado font-serif text-xl'>¡Hoy es el gran día!</p>";
-                return;
-            }
-
-            const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-            document.getElementById('days').innerText = d.toString().padStart(2, '0');
-            document.getElementById('hours').innerText = h.toString().padStart(2, '0');
-            document.getElementById('minutes').innerText = m.toString().padStart(2, '0');
-            document.getElementById('seconds').innerText = s.toString().padStart(2, '0');
+            if (diff <= 0) return;
+            document.getElementById('days').innerText = Math.floor(diff / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+            document.getElementById('hours').innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+            document.getElementById('minutes').innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+            document.getElementById('seconds').innerText = Math.floor((diff % (1000 * 60)) / 1000).toString().padStart(2, '0');
         }
-
         setInterval(updateCountdown, 1000);
         updateCountdown();
     </script>
